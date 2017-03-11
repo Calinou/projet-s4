@@ -1,0 +1,252 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Parties
+ *
+ * @ORM\Table(name="parties")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\PartiesRepository")
+ */
+class Parties
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="joueur_1", type="integer")
+     */
+    private $joueur1;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="joueur_2", type="integer")
+     */
+    private $joueur2;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="main_joueur_1", type="json_array")
+     */
+    private $mainJoueur1;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="main_joueur_2", type="json_array")
+     */
+    private $mainJoueur2;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="pioche", type="json_array")
+     */
+    private $pioche;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="jeu", type="json_array")
+     */
+    private $jeu;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="defausse", type="json_array")
+     */
+    private $defausse;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set joueur1
+     *
+     * @param integer $joueur1
+     *
+     * @return Parties
+     */
+    public function setJoueur1($joueur1)
+    {
+        $this->joueur1 = $joueur1;
+
+        return $this;
+    }
+
+    /**
+     * Get joueur1
+     *
+     * @return int
+     */
+    public function getJoueur1()
+    {
+        return $this->joueur1;
+    }
+
+    /**
+     * Set joueur2
+     *
+     * @param integer $joueur2
+     *
+     * @return Parties
+     */
+    public function setJoueur2($joueur2)
+    {
+        $this->joueur2 = $joueur2;
+
+        return $this;
+    }
+
+    /**
+     * Get joueur2
+     *
+     * @return int
+     */
+    public function getJoueur2()
+    {
+        return $this->joueur2;
+    }
+
+    /**
+     * Set mainJoueur1
+     *
+     * @param array $mainJoueur1
+     *
+     * @return Parties
+     */
+    public function setMainJoueur1($mainJoueur1)
+    {
+        $this->mainJoueur1 = $mainJoueur1;
+
+        return $this;
+    }
+
+    /**
+     * Get mainJoueur1
+     *
+     * @return array
+     */
+    public function getMainJoueur1()
+    {
+        return $this->mainJoueur1;
+    }
+
+    /**
+     * Set mainJoueur2
+     *
+     * @param array $mainJoueur2
+     *
+     * @return Parties
+     */
+    public function setMainJoueur2($mainJoueur2)
+    {
+        $this->mainJoueur2 = $mainJoueur2;
+
+        return $this;
+    }
+
+    /**
+     * Get mainJoueur2
+     *
+     * @return array
+     */
+    public function getMainJoueur2()
+    {
+        return $this->mainJoueur2;
+    }
+
+    /**
+     * Set pioche
+     *
+     * @param array $pioche
+     *
+     * @return Parties
+     */
+    public function setPioche($pioche)
+    {
+        $this->pioche = $pioche;
+
+        return $this;
+    }
+
+    /**
+     * Get pioche
+     *
+     * @return array
+     */
+    public function getPioche()
+    {
+        return $this->pioche;
+    }
+
+    /**
+     * Set jeu
+     *
+     * @param array $jeu
+     *
+     * @return Parties
+     */
+    public function setJeu($jeu)
+    {
+        $this->jeu = $jeu;
+
+        return $this;
+    }
+
+    /**
+     * Get jeu
+     *
+     * @return array
+     */
+    public function getJeu()
+    {
+        return $this->jeu;
+    }
+
+    /**
+     * Set defausse
+     *
+     * @param array $defausse
+     *
+     * @return Parties
+     */
+    public function setDefausse($defausse)
+    {
+        $this->defausse = $defausse;
+
+        return $this;
+    }
+
+    /**
+     * Get defausse
+     *
+     * @return array
+     */
+    public function getDefausse()
+    {
+        return $this->defausse;
+    }
+}
+
