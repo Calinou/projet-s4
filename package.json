@@ -1,0 +1,24 @@
+{
+  "name": "projet-s4",
+  "version": "1.0.0",
+  "description": "Projet S4",
+  "private": true,
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass --watch --recursive --output-style compressed --output web/dist/assets/css web/src/assets/scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Calinou/projet-s4.git"
+  },
+  "author": "Hugo Locurcio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Calinou/projet-s4/issues"
+  },
+  "homepage": "https://github.com/Calinou/projet-s4#readme"
+}
