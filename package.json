@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Calinou/projet-s4/issues"
   },
-  "homepage": "https://github.com/Calinou/projet-s4#readme"
+  "homepage": "https://github.com/Calinou/projet-s4#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.0"
+  }
 }
