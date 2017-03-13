@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass --watch --recursive --output-style compressed --output web/dist/assets/css web/src/assets/scss"
+    "sass": "node-sass --recursive --output-style compressed --output web/dist/assets/css web/src/assets/scss",
+    "sass:watch": "node-sass --watch --recursive --output-style compressed --output web/dist/assets/css web/src/assets/scss"
   },
   "repository": {
     "type": "git",
