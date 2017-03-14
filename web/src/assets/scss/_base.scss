@@ -2,7 +2,7 @@
 // MIT license, see `LICENSE.md` for more information.
 
 body {
-  padding-top: 60px;
+  padding-top: 65px;
   color: #333;
   cursor: default;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -16,4 +16,17 @@ h4,
 h5,
 h6 {
   font-weight: 300;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+nav {
+  box-shadow: 0 0 6px hsla(0, 0%, 0%, .4);
+}
+
+footer {
+  margin-top: 150px;
+  color: hsl(0, 0%, 55%);
 }

@@ -1,6 +1,6 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+index:
+    path: /
+    defaults: { _controller: AppBundle:Default:index }
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"

@@ -37,14 +37,14 @@ class Users extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="infos", type="string", length=255, nullable=true)
+     * @ORM\Column(name="infos", type="string", length=200, nullable=true)
      */
     private $infos;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date_inscription", type="datetime", nullable=True)
+     * @ORM\Column(name="date_inscription", type="datetime", nullable=true)
      */
     private $dateInscription;
 

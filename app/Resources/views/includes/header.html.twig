@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ path('index') }}">Cartodisney</a>
+            <a class="navbar-brand" href="{{ path('index') }}">{{ PROJECT_NAME }}</a>
         </div>
 
         <div class="collapse navbar-collapse" id="navbar">
@@ -18,13 +18,13 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ app.user.username }} <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ path('fos_user_profile_show') }}">{% trans %}Profile{% endtrans %}</a></li>
-                            <li><a href="{{ path('fos_user_security_logout') }}">{% trans %}Log out{% endtrans %}</a></li>
+                            <li><a href="{{ path('fos_user_profile_show') }}">{% trans %}account.profile{% endtrans %}</a></li>
+                            <li><a href="{{ path('fos_user_security_logout') }}">{% trans %}account.log_out{% endtrans %}</a></li>
                         </ul>
                     </li>
                 {% else %}
-                    <li><a href="{{ path('fos_user_security_login') }}">{% trans %}Sign in{% endtrans %}</a></li>
-                    <li><a href="{{ path('fos_user_registration_register') }}">{% trans %}Register{% endtrans %}</a></li>
+                    <li><a href="{{ path('fos_user_security_login') }}">{% trans %}account.sign_in{% endtrans %}</a></li>
+                    <li><a href="{{ path('fos_user_registration_register') }}">{% trans %}account.register{% endtrans %}</a></li>
                 {% endif %}
             </ul>
         </div>

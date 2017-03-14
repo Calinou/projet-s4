@@ -1,4 +1,6 @@
-Register: S'inscrire
-Sign in: Se connecter
-Profile: Profil
-Log out: Se déconnecter
+account.register: S'inscrire
+account.sign_in: Se connecter
+account.profile: Profil
+account.log_out: Se déconnecter
+home.welcome: Bienvenue sur %project_name%
+home.welcome_message: Pour vous connecter ou vous inscrire, utilisez les boutons en haut à droite.

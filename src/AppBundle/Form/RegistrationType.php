@@ -11,9 +11,9 @@ class RegistrationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('prenom', TextType::class, ['label' => 'Prénom']);
-        $builder->add('nom', TextType::class, ['label' => 'Nom']);
-        $builder->add('infos', TextareaType::class, ['label' => 'Biographie']);
+        $builder->add('prenom', TextType::class,    ['label' => 'Prénom', 'required' => false]);
+        $builder->add('nom', TextType::class,       ['label' => 'Nom', 'required' => false]);
+        $builder->add('infos', TextareaType::class, ['label' => 'Biographie (200 caractères max.)', 'required' => false]);
     }
 
     public function getParent()
