@@ -87,3 +87,25 @@ fos_user:
             enabled: false
         form:
             type: AppBundle\Form\RegistrationType
+
+easy_admin:
+    site_name: "Cartodisney"
+    entities:
+        Users:
+            class: AppBundle\Entity\Users
+            edit:
+                fields:
+                    - username
+                    - email
+                    - enabled
+                    - lastLogin
+                    - { property: 'plainPassword', type: 'password', type_options: { required: false} }
+                form_options: { validation_groups: ['Profile'] }
+            new:
+                fields:
+                    - username
+                    - email
+                    - enabled
+                    - lastLogin
+                    - { property: 'plainPassword', type: 'password', type_options: { required: true} }
+                form_options: { validation_groups: ['Registration'] }

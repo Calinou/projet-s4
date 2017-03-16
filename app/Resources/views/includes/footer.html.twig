@@ -1,7 +1,10 @@
 <footer>
     <div class="container">
         <p class="text-center">
-            © 2017 {{ PROJECT_NAME }}
+            © 2017 {{ PROJECT_NAME }}<br>
+            {% if is_granted('ROLE_ADMIN') %}
+                <a href="{{ path('easyadmin') }}">{% trans %}footer.admin_link{% endtrans %}</a>
+            {% endif %}
         </p>
     </div>
 </footer>

@@ -4,3 +4,4 @@ account.profile: Profile
 account.log_out: Log out
 home.welcome: Welcome to %project_name%
 home.welcome_message: To log in or sign up, use the buttons at the top right.
+footer.admin_link: Site administration
