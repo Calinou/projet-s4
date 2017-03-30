@@ -90,6 +90,11 @@ fos_user:
 
 easy_admin:
     site_name: "Cartodisney"
+    design:
+        brand_color: "#421b61"
+        assets:
+            css:
+                 - "/admin/admin.css"
     entities:
         Users:
             class: AppBundle\Entity\Users
