@@ -2,6 +2,8 @@ account.register: Register
 account.sign_in: Sign in
 account.profile: Profile
 account.log_out: Log out
+home.create_game: Create game
+home.show_game_title: Playing against %opponent%
 home.welcome: Welcome to %project_name%
 home.welcome_message: To log in or sign up, use the buttons at the top right.
 footer.admin_link: Site administration

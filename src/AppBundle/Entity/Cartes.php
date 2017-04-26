@@ -45,9 +45,9 @@ class Cartes
     /**
      * @var string
      *
-     * @ORM\Column(name="image", type="string", length=255)
+     * @ORM\Column(name="annee", type="integer")
      */
-    private $image;
+    private $annee;
 
 
     /**
@@ -133,27 +133,26 @@ class Cartes
     }
 
     /**
-     * Set image
+     * Set annee
      *
-     * @param string $image
+     * @param integer $annee
      *
      * @return Cartes
      */
-    public function setImage($image)
+    public function setAnnee($annee)
     {
-        $this->image = $image;
+        $this->annee = $annee;
 
         return $this;
     }
 
     /**
-     * Get image
+     * Get annee
      *
-     * @return string
+     * @return integer
      */
-    public function getImage()
+    public function getAnnee()
     {
-        return $this->image;
+        return $this->annee;
     }
 }
-

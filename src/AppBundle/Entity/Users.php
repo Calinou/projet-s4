@@ -154,4 +154,3 @@ class Users extends BaseUser
         return $this->dateInscription;
     }
 }
-

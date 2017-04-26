@@ -24,14 +24,14 @@ class Parties
     /**
      * @var int
      *
-     * @ORM\Column(name="joueur_1", type="integer")
+     * @ORM\ManyToOne(targetEntity="Users", inversedBy="id")
      */
     private $joueur1;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="joueur_2", type="integer")
+     * @ORM\ManyToOne(targetEntity="Users", inversedBy="id")
      */
     private $joueur2;
 
@@ -52,21 +52,21 @@ class Parties
     /**
      * @var array
      *
-     * @ORM\Column(name="pioche", type="json_array")
+     * @ORM\Column(name="pioche", type="json_array", nullable=true)
      */
     private $pioche;
 
     /**
      * @var array
      *
-     * @ORM\Column(name="jeu", type="json_array")
+     * @ORM\Column(name="jeu", type="json_array", nullable=true)
      */
     private $jeu;
 
     /**
      * @var array
      *
-     * @ORM\Column(name="defausse", type="json_array")
+     * @ORM\Column(name="defausse", type="json_array", nullable=true)
      */
     private $defausse;
 
@@ -136,7 +136,7 @@ class Parties
      *
      * @return Parties
      */
-    public function setMainJoueur1($mainJoueur1)
+    public function setMainJoueur1(array $mainJoueur1)
     {
         $this->mainJoueur1 = $mainJoueur1;
 
@@ -160,7 +160,7 @@ class Parties
      *
      * @return Parties
      */
-    public function setMainJoueur2($mainJoueur2)
+    public function setMainJoueur2(array $mainJoueur2)
     {
         $this->mainJoueur2 = $mainJoueur2;
 
@@ -249,4 +249,3 @@ class Parties
         return $this->defausse;
     }
 }
-

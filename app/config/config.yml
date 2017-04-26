@@ -42,7 +42,7 @@ twig:
     form_themes:
         - bootstrap_3_layout.html.twig
     globals:
-      PROJECT_NAME: Cartodisney
+      PROJECT_NAME: The Otherside
 
 # Doctrine Configuration
 doctrine:
@@ -81,7 +81,7 @@ fos_user:
     user_class: AppBundle\Entity\Users
     from_email:
         address: "hugo.locurcio@hugo.pro"
-        sender_name: "Cartodisney"
+        sender_name: "The Otherside"
     registration:
         confirmation:
             enabled: false
@@ -89,7 +89,7 @@ fos_user:
             type: AppBundle\Form\RegistrationType
 
 easy_admin:
-    site_name: "Cartodisney"
+    site_name: "The Otherside"
     design:
         brand_color: "#421b61"
         assets:

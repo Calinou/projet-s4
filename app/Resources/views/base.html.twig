@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}Cartodisney{% endblock %}</title>
+        <title>{% block title %}{{ PROJECT_NAME }}{% endblock %} - {{ PROJECT_NAME }}</title>
         <link rel="stylesheet" href="{{ asset('dist/lib/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('dist/assets/css/main.css') }}">
         {% block stylesheets %}{% endblock %}

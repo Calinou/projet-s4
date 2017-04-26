@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {% trans with {'%opponent%': opponent} %}home.show_game_title{% endtrans %}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>{% trans %}GAME{% endtrans %}</h1>
+        GAME
+    </div>
+{% endblock %}

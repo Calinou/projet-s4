@@ -2,6 +2,25 @@ index:
     path: /
     defaults: { _controller: AppBundle:Default:index }
 
+
+init_database:
+    path: /init-database
+    defaults: { _controller: AppBundle:InitDatabase:init }
+
+create_game_form:
+    path: /game/create
+    defaults: { _controller: AppBundle:Default:createGameForm }
+
+create_game:
+    path: /game/create/{opponent}
+    defaults: { _controller: AppBundle:Default:createGame }
+    requirements:
+        page: '\d+'
+
+show_game:
+    path: /game/{game_id}
+    defaults: { _controller: AppBundle:Default:showGame }
+
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
