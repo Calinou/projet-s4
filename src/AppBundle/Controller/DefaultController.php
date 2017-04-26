@@ -3,12 +3,28 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Parties as Partie;
+use AppBundle\Entity\Users as User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
+    /**
+     * Internal function to check whether Joueur2 is the opponent of the user or not.
+     *
+     * @param Partie $partie The game object where the check should be performed.
+     * @param User $user The user object to check against.
+     * @return bool
+     */
+    private function isJoueur2Opponent(Partie $partie, User $user)
+    {
+        if ($user->getId() === $partie->getJoueur1()->getId()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     /**
      * Displays home page.
@@ -94,9 +110,27 @@ class DefaultController extends Controller
         $repository = $this->getDoctrine()->getRepository('AppBundle:Parties');
         $partie = $repository->find($game_id);
         $opponent = $partie->getJoueur2()->getUsername();
+        $user = $this->getUser();
+
+        // Display the hand of the current user only
+        // A player can't see the hand of their opponent
+        if ($this->isJoueur2Opponent($partie, $user)) {
+            $hand = $partie->getMainJoueur1();
+        } else {
+            $hand = $partie->getMainJoueur2();
+        }
+
+        // Get card objects that match the player's hand, for display
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Cartes');
+        $query = $repository->createQueryBuilder('card')
+            ->where('card.id IN (:hand)')->setParameter('hand', $hand)
+            ->getQuery();
+
+        $cards = $query->getResult();
 
         return $this->render('show_game.html.twig', [
             'opponent' => $opponent,
+            'cards'    => $cards,
         ]);
     }
 }

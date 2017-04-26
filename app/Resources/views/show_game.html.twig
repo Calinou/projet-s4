@@ -6,7 +6,9 @@
 
 {% block body %}
     <div class="container">
-        <h1>{% trans %}GAME{% endtrans %}</h1>
-        GAME
+        <h1>{% trans with {'%opponent%': opponent} %}home.show_game_title{% endtrans %}</h1>
+        {% for card in cards %}
+            <img src="{{ asset('img/cards/'~card.categorie~'/'~card.getImageFilename()~'.png') }}" alt="{{ card.nom }}" width="128">
+        {% endfor %}
     </div>
 {% endblock %}

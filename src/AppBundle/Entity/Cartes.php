@@ -155,4 +155,25 @@ class Cartes
     {
         return $this->annee;
     }
+
+    /**
+     * Card image filenames differ from the IDs, so an array is filled with them after some processing
+     *
+     * @return string
+     */
+    public function getImageFilename()
+    {
+        $value = $this->getValeur();
+
+        if ($value >= 11) {
+            // "Extra" card, replace name, all "Extra" cards have the same image
+            return "extra";
+        } else if ($value <= 9) {
+            // Leading zero is needed
+            return "0".$value;
+        } else {
+            // Nothing special is needed (only valid for the "10" card)
+            return  $value;
+        }
+    }
 }
