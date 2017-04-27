@@ -19,11 +19,11 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ app.user.username }} <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ path('fos_user_profile_show') }}">{% trans %}account.profile{% endtrans %}</a></li>
-                            <li><a href="{{ path('fos_user_security_logout') }}">{% trans %}account.log_out{% endtrans %}</a></li>
+                            <li><a href="{{ path('fos_user_security_logout') }}">{% trans %}account.logOut{% endtrans %}</a></li>
                         </ul>
                     </li>
                 {% else %}
-                    <li><a href="{{ path('fos_user_security_login') }}">{% trans %}account.sign_in{% endtrans %}</a></li>
+                    <li><a href="{{ path('fos_user_security_login') }}">{% trans %}account.signIn{% endtrans %}</a></li>
                     <li><a href="{{ path('fos_user_registration_register') }}">{% trans %}account.register{% endtrans %}</a></li>
                 {% endif %}
             </ul>

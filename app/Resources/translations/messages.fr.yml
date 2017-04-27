@@ -1,9 +1,9 @@
 account.register: S'inscrire
-account.sign_in: Se connecter
+account.signIn: Se connecter
 account.profile: Profil
-account.log_out: Se déconnecter
-home.create_game:  Créer une partie
-home.show_game_title: Partie contre %opponent%
+account.logOut: Se déconnecter
+home.createGame:  Créer une partie
+home.showGameTitle: Partie contre %opponent%
 home.welcome: Bienvenue sur %project_name%
-home.welcome_message: Pour vous connecter ou vous inscrire, utilisez les boutons en haut à droite.
-footer.admin_link: Administration du site
+home.welcomeMessage: Pour vous connecter ou vous inscrire, utilisez les boutons en haut à droite.
+footer.adminLink: Administration du site

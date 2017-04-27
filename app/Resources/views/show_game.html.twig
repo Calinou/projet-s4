@@ -1,14 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    {% trans with {'%opponent%': opponent} %}home.show_game_title{% endtrans %}
+    {% trans with {'%opponent%': opponent} %}home.showGameTitle{% endtrans %}
 {% endblock %}
 
 {% block body %}
     <div class="container">
-        <h1>{% trans with {'%opponent%': opponent} %}home.show_game_title{% endtrans %}</h1>
+        <h1>{% trans with {'%opponent%': opponent} %}home.showGameTitle{% endtrans %}</h1>
+        <table width="100%">
+            <tr>
+                <td><h4 class="text-primary text-center">Catégorie 1</h4></td>
+                <td><h4 class="text-success text-center">Catégorie 2</h4></td>
+                <td><h4 class="text-danger text-center">Catégorie 3</h4></td>
+                <td><h4 class="text-warning text-center">Catégorie 4</h4></td>
+                <td><h4 class="text-info text-center">Catégorie 5</h4></td>
+            </tr>
+        </table>
         {% for card in cards %}
-            <img src="{{ asset('img/cards/'~card.categorie~'/'~card.getImageFilename()~'.png') }}" alt="{{ card.nom }}" width="128">
+            <a href="{{ path('place_card', {'gameId': gameId, 'cardId': card.id}) }}">
+                <img src="{{ asset('img/cards/'~card.categorie~'/'~card.getImageFilename()~'.png') }}" alt="{{ card.nom }}" width="128">
+            </a>
         {% endfor %}
     </div>
 {% endblock %}

@@ -9,10 +9,10 @@
         <h1 class="text-center">{% trans with {'%project_name%': PROJECT_NAME} %}home.welcome{% endtrans %}</h1>
         {# Display a welcome message if user is not logged in #}
         {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-            <a class="btn btn-primary btn-lg" href="{{ path('create_game_form') }}">{% trans %}home.create_game{% endtrans %}</a>
+            <a class="btn btn-primary btn-lg" href="{{ path('create_game_form') }}">{% trans %}home.createGame{% endtrans %}</a>
         {% else %}
             <p class="text-center">
-                {% trans %}home.welcome_message{% endtrans %}
+                {% trans %}home.welcomeMessage{% endtrans %}
             </p>
         {% endif %}
     </div>

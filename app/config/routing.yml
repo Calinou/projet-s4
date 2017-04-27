@@ -1,29 +1,35 @@
+# Home page
 index:
     path: /
     defaults: { _controller: AppBundle:Default:index }
 
-
-init_database:
-    path: /init-database
-    defaults: { _controller: AppBundle:InitDatabase:init }
-
+# Game creation form
 create_game_form:
     path: /game/create
-    defaults: { _controller: AppBundle:Default:createGameForm }
+    defaults: { _controller: AppBundle:Game:createGameForm }
 
+# Game creation form handling
 create_game:
     path: /game/create/{opponent}
-    defaults: { _controller: AppBundle:Default:createGame }
+    defaults: { _controller: AppBundle:Game:createGame }
     requirements:
         page: '\d+'
 
+# Game display page
 show_game:
-    path: /game/{game_id}
-    defaults: { _controller: AppBundle:Default:showGame }
+    path: /game/{gameId}
+    defaults: { _controller: AppBundle:Game:showGame }
 
+# Accessed when the player places a card
+place_card:
+    path: /game/{gameId}/place-card/{cardId}
+    defaults: { _controller: AppBundle:Game:placeCard }
+
+# Import FOSUserBundle routes
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
+# Import EasyAdmin routes
 easy_admin_bundle:
     resource: "@EasyAdminBundle/Controller/"
     type:     annotation

@@ -3,7 +3,7 @@
         <p class="text-center">
             © 2017 {{ PROJECT_NAME }}<br>
             {% if is_granted('ROLE_ADMIN') %}
-                <a href="{{ path('easyadmin') }}">{% trans %}footer.admin_link{% endtrans %}</a>
+                <a href="{{ path('easyadmin') }}">{% trans %}footer.adminLink{% endtrans %}</a>
             {% endif %}
         </p>
     </div>
