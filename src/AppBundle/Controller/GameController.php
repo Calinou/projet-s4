@@ -156,13 +156,13 @@ class GameController extends Controller
         $repository = $this->getDoctrine()->getRepository('AppBundle:Parties');
         $game = $repository->find($gameId);
         $hand = $this->getOwnHand($game, $this->getUser());
-        dump($hand);
+
         if (in_array($cardId, $hand)) {
             $index = array_search($cardId, $hand);
             unset($hand[$index]);
             array_values($hand);
-            dump($hand);
         }
+
         return new Response('Placed card.');
     }
 }
