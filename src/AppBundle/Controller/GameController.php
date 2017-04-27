@@ -102,9 +102,9 @@ class GameController extends Controller
         $manager->persist($partie);
         $manager->flush();
 
-        $game_id = $partie->getId();
+        $gameId = $partie->getId();
 
-        return $this->redirectToRoute('show_game', ['game_id' => $game_id]);
+        return $this->redirectToRoute('show_game', ['gameId' => $gameId]);
     }
 
 
